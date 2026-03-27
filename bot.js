@@ -4,9 +4,9 @@ const config = require('./config.json');
 const bot = mineflayer.createBot({
   host: config.hainzsmp.minefort.com,
   port: config.25565,
-  username: config.,
+  username: config._,
   auth: 'offline',
-  version: false,
+  version: 1.21.10,
   viewDistance: config.botChunk
 });
 
