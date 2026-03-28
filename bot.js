@@ -2,8 +2,8 @@ const mineflayer = require('mineflayer');
 const config = require('./config.json');
 
 const bot = mineflayer.createBot({
-  host: config.hainzsmp.minefort.com,
-  port: config.25565,
+  host: config.imperotaeziano.falixsrv.me,
+  port: config.23381,
   username: config._,
   auth: 'offline',
   version: 1.21.10,
