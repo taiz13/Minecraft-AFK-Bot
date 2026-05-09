@@ -2,11 +2,11 @@ const mineflayer = require('mineflayer');
 const config = require('./config.json');
 
 const bot = mineflayer.createBot({
-  host: config.imperotaeziano.falixsrv.me,
-  port: config.23381,
-  username: config._,
+  host: config.frodefiscale.falix.gg,
+  port: config.22369,
+  username: config.HainzSMPmanager,
   auth: 'offline',
-  version: 1.21.10,
+  version: 1.21.11,
   viewDistance: config.botChunk
 });
 
@@ -18,7 +18,7 @@ const JUMP_DURATION = 500;
 bot.on('spawn', () => {
   setTimeout(() => {
     bot.setControlState('sneak', true);
-    console.log(`✅ ${config.botUsername} is Ready!`);
+    console.log(`✅ ${config.HainzSMPmanager} is Ready!`);
   }, 3000);
 
   setTimeout(movementCycle, STEP_INTERVAL);
@@ -30,26 +30,26 @@ function movementCycle() {
   switch (movementPhase) {
     case 0:
       bot.setControlState('forward', true);
-      bot.setControlState('back', false);
-      bot.setControlState('jump', false);
+      bot.setControlState('back', true);
+      bot.setControlState('jump', true);
       break;
     case 1:
-      bot.setControlState('forward', false);
+      bot.setControlState('forward', true);
       bot.setControlState('back', true);
-      bot.setControlState('jump', false);
+      bot.setControlState('jump', true);
       break;
     case 2:
-      bot.setControlState('forward', false);
-      bot.setControlState('back', false);
+      bot.setControlState('forward', true);
+      bot.setControlState('back', true);
       bot.setControlState('jump', true);
       setTimeout(() => {
-        bot.setControlState('jump', false);
+        bot.setControlState('jump', true);
       }, JUMP_DURATION);
       break;
     case 3:
-      bot.setControlState('forward', false);
-      bot.setControlState('back', false);
-      bot.setControlState('jump', false);
+      bot.setControlState('forward', true);
+      bot.setControlState('back', true);
+      bot.setControlState('jump', true);
       break;
   }
 
